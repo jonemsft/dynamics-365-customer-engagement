@@ -85,13 +85,15 @@ The bot user is first created as an application user and then assigned the **Omn
 
 1. Select the save icon at the bottom of the page.
 
+### Add the bot to a workstream
+
+If your bot is designed to handle incoming customer queries, we recommend setting your bot up on the workstream. This optimizes the routing performance, allowing the bot to handle the initial customer inquiry, only transfering to a human agent when needed. Read more [here](https://learn.microsoft.com/en-us/dynamics365/customer-service/administer/create-workstreams#add-a-bot-to-a-workstream)
+
 ### Add the bot user to queues
 
-You can add a bot user to specific queues where you want the bot to handle the customer queries first, instead of the agent. For this option, you must ensure that the bot user has the highest capacity among all users in the queue.
+Alternatively, you can add a bot user to specific queues. You may want to do this if your bot is designed to handle conversations that are transferred from another bot or a human. For this option, you must ensure that the bot user has the highest capacity among all users in the queue. Alternatively, you can create a queue with the bot user only. 
 
-Alternatively, you can also create a queue with the bot user only. In such a case, ensure that the routing rules are set in a way that customer queries are sent to this queue first. This action ensures that the bot acts as the first recipient for all queries.
-
-An agent can transfer a chat to a bot by adding the bot to a queue, and then transferring the chat to the queue.
+An agent can transfer a chat to a bot by transferring the chat to the queue containing the bot.
 
 > [!Note]
 > - The chat cannot be transferred to the same bot.
